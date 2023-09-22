@@ -12,51 +12,50 @@ User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya
 
 a. Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut? 
 b. Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut?
-![image](https://github.com/YudisthiraPutra/Jarkom-Modul-1-B19-2023/assets/93124693/396953af-2ab2-4153-88be-1e0b1b693c90)
- kueri "ftp.request.command == STOR" akan mengidentifikasi paket-paket jaringan yang terkait dengan protokol FTP dan memiliki perintah "STOR" di dalamnya. Kueri semacam ini dapat digunakan dalam alat pemantauan lalu lintas jaringan, seperti Wireshark atau alat sejenisnya, untuk menganalisis aktivitas FTP dan mengidentifikasi transaksi pengunggahan file yang menggunakan perintah "STOR". Jadi setelah kita menuliskan kueri, akan muncul hasil searchingnya dan kita bisa melihat informasi yang diinginkan di packet tersebut.
 
 
 c. Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
 d. Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
-![1 response](https://github.com/YudisthiraPutra/Jarkom-Modul-1-B19-2023/assets/93124693/b575a7e1-ca29-4225-ba05-0cc701def1e9)
-untuk menemukan jawaban c dan d kita bisa filtering "ftp" dan kita dapat melihat informasi dibagian bawah packet 147 terdapat informasi response. Kemudian kita bisa melihat informasi yang dicari di dalamnya.
 
 ```
 ### Pengerjaan
+![WhatsApp Image 2023-09-22 at 19 38 10](https://github.com/YudisthiraPutra/Jarkom-Modul-1-B19-2023/assets/114007340/4e56f3ac-390e-4140-8abb-651a5dee5651)
+untuk jawaban a dan bkueri "ftp.request.command == STOR" akan mengidentifikasi paket-paket jaringan yang terkait dengan protokol FTP dan memiliki perintah "STOR" di dalamnya. Kueri semacam ini dapat digunakan dalam alat pemantauan lalu lintas jaringan, seperti Wireshark atau alat sejenisnya, untuk menganalisis aktivitas FTP dan mengidentifikasi transaksi pengunggahan file yang menggunakan perintah "STOR". Jadi setelah kita menuliskan kueri, akan muncul hasil searchingnya dan kita bisa melihat informasi yang diinginkan di packet tersebut.
+![WhatsApp Image 2023-09-22 at 19 39 09](https://github.com/YudisthiraPutra/Jarkom-Modul-1-B19-2023/assets/114007340/52a58883-c50b-47fd-b4df-19066c849257)
+untuk menemukan jawaban c dan d kita bisa filtering "ftp" dan kita dapat melihat informasi dibagian bawah packet 147 terdapat informasi response. Kemudian kita bisa melihat informasi yang dicari di dalamnya.
+
+
 ## 2
 ### Soal
 ```
-Sebutkan web server yang digunakan pada portal praktikum J
-![2 prak](https://github.com/YudisthiraPutra/Jarkom-Modul-1-B19-2023/assets/93124693/3491d18d-e904-47eb-89dd-5024645e2b94)
-aringan Komputer!
-langkah yang digunakan adalah mencari http dan memilih nilai ip 10.21.78.111. kemudian kita buka bagian hypertext dan terdapat detail server bernamakan gunicorn.
-
+Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
 
 ```
 ### Pengerjaan
+![WhatsApp Image 2023-09-22 at 19 39 30](https://github.com/YudisthiraPutra/Jarkom-Modul-1-B19-2023/assets/114007340/a8f98f73-3c01-4872-aba6-e61c45f4ba04)
+langkah yang digunakan adalah mencari http dan memilih nilai ip 10.21.78.111. kemudian kita buka bagian hypertext dan terdapat detail server bernamakan gunicorn.
+
 ## 3
 ### Soal
 ```
 Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
 a. Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702?
 b. Protokol layer transport apa yang digunakan?.
-![no 3](https://github.com/YudisthiraPutra/Jarkom-Modul-1-B19-2023/assets/93124693/70d46a6d-a730-4bef-ba74-bcff7b74ca51)
-Kita menggunakan 2 query yang dihubungkan dengan operator &&, pertama ip.dst dan ip.src kemudian tcp.port dan udp.port. Kemudian dengan menggunakan query yang tertera di foto kita bisa mendapatkan jumlah paket yaitu 21 dan protocol yang digunakan yaitu "UDP"
-
-
 
 ```
 ### Pengerjaan
+![WhatsApp Image 2023-09-22 at 19 36 29](https://github.com/YudisthiraPutra/Jarkom-Modul-1-B19-2023/assets/114007340/7bf5cf6b-b2af-4924-985a-67b509e305af)
+Kita menggunakan 2 query yang dihubungkan dengan operator &&, pertama ip.dst dan ip.src kemudian tcp.port dan udp.port. Kemudian dengan menggunakan query yang tertera di foto kita bisa mendapatkan jumlah paket yaitu 21 dan protocol yang digunakan yaitu "UDP"
+
 ## 4
 ### Soal
 ```
 Berapa nilai checksum yang didapat dari header pada paket nomor 130?
-![4  chechksum](https://github.com/YudisthiraPutra/Jarkom-Modul-1-B19-2023/assets/93124693/a62a0854-f37b-4699-9771-c735367699f5)
-untuk mencari jawaban nomer 4, Kita bisa langsung menuju packet 130 kemudian melihat User Datagram Protocol dan nilai Checksum tertera yaitu 0x18e5.
-
-
 ```
 ### Pengerjaan
+![WhatsApp Image 2023-09-22 at 19 36 30](https://github.com/YudisthiraPutra/Jarkom-Modul-1-B19-2023/assets/114007340/e4c35ba2-3f21-420a-aa0f-674513d97b91)
+untuk mencari jawaban nomer 4, Kita bisa langsung menuju packet 130 kemudian melihat User Datagram Protocol dan nilai Checksum tertera yaitu 0x18e5.
+
 ## 5
 ### Soal
 ```
